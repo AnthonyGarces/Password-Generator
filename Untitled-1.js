@@ -15,7 +15,7 @@ function pwValid () {
 //Bring in Test Driven Development (TDD) 
     //add a conditional 
     if (isNaN(userLength) === true) {
-    //could omit the === true since it already returns a boolean
+    //could omit the === true since it already returns a boolean without it
         alert("Password length must be provided as a number");
         return
     }
@@ -26,7 +26,7 @@ function pwValid () {
     }  
 }
 //calls this function
-pwValid()
+// pwValid()
 
 function pwgenerator () {
     var userChoices = [userLength, userLowerLetters, userNumbers, userSpecialChars, userUpperLetters];
@@ -49,7 +49,7 @@ function pwgenerator () {
     }
 
 
-    // this will loop until each random character is chosen NOT FUNCTIONING ranCharSelector
+    // this will loop until each random character is chosen
     for (var i = 0; i < userLength; i++) {
         //var that selects the array that the random character will be pulled from
         var ranArraySelector = Math.floor(Math.random() * userFinalpw.length);
@@ -69,13 +69,13 @@ function pwgenerator () {
     // //get the array into a single string
     var pwString = password.join((""));
 
-    // //html element that the text needs to get to applied to
-    // console.log(document.body.Node.childNodes[1].childNodes[3].childNodes[4]);
+    // make a var representing the location that the password should be put
+    var returnHere = document.getElementById("Textbox");
 
-    //HELP
-    // //appends the pwString to the html element that it needs to get added to ??? 
-    // document.body.Node.childNodes[1].childNodes[3].childNodes[4].appendChild(pwString);
+    //var repping the making pf pwString into a text node that can be added to returnHere
+    var passwordGiven =document.createTextNode(pwString);
+
+    //adds pwString to returnHere 
+    returnHere.appendChild(passwordGiven)
 };
-
-pwgenerator()
 
