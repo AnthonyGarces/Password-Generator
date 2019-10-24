@@ -56,35 +56,25 @@ function pwgenerator () {
         //var for userFinal[ranArraySelector].length
         var innerArrayLength = userFinalpw[ranArraySelector].length;
         
-        //make sure all these return real numbers/selected arrays
-
-        // console.log(ranArraySelector);
-        // console.log(userFinalpw[ranArraySelector]);
-        // console.log(userFinalpw[ranArraySelector].length);
-        // console.log(innerArrayLength);
-
         //randomly picks one of the items in the randomly selected array
-        var ranCharSelector = Math.floor(Math.random * innerArrayLength);
-        console.log(ranCharSelector);
-        //NOT WORKING
+        var ranCharSelector = Math.floor(Math.random()* innerArrayLength);
+        
         //ranChar should be a random number that is one less than the length of the selected inner array that we can use to...
         var chosenChar = userFinalpw[ranArraySelector][ranCharSelector];
         //Select a random character from the selected interior array
         
         //add the random character to the password array which is where the actual characters to be given to the user will be stored
         password.push(chosenChar);
-        
-                
     }
-
-    //get the array into a single string
+    // //get the array into a single string
     var pwString = password.join((""));
 
-    //html element that the text needs to get to applied to
-    console.log(document.body.Node.childNodes[1].childNodes[3].childNodes[4]);
+    // //html element that the text needs to get to applied to
+    // console.log(document.body.Node.childNodes[1].childNodes[3].childNodes[4]);
 
-    //appends the pwString to the html element that it needs to get added to
-    document.body.Node.childNodes[1].childNodes[3].childNodes[4].appendChild(pwString);
+    //HELP
+    // //appends the pwString to the html element that it needs to get added to ??? 
+    // document.body.Node.childNodes[1].childNodes[3].childNodes[4].appendChild(pwString);
 };
 
 pwgenerator()
