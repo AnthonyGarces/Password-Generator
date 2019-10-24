@@ -1,0 +1,3 @@
+The goal of Password-Generator is to create a totally randomized password given user input on 5 criteria: length, and the inclusion of special characters, numbers, upper and lower letters.
+The goal, to be exact, is to gather the user input, and to randomly select both the character type for the given character, as well as to randomly select the specific character. It should then add the password to a functioning html page where the text can be copied manually, or copied to clipboard by clicking a button presenting the option.  
+It does this through primarily through javascript. 
