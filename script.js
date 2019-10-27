@@ -21,13 +21,15 @@ function pwgenerator () {
         //add a conditional 
         if (isNaN(userLength) === true) {
         //could omit the === true since it already returns a boolean without it
-            alert("Password length must be provided as a number");
-            return false
+            alert("Password length must be provided as a number. Please try again");
+            return;
+            pwgenerator();
         }
         // ensures a reasonable length is input for the password
         if (userLength < 8 || userLength > 128) {
-            alert("Password length may be too long or too short. Please select a number between 8 and 128");
-            return false
+            alert("Password length may be too long or too short. Please select a number between 8 and 128 for maximum security purposes.");
+            return;
+            pwgenerator();
         }  
     }
 
